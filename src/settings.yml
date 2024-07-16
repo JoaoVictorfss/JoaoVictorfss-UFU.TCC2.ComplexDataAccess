@@ -1,0 +1,38 @@
+db:
+  postgresql:
+    connStr: ''
+  neo4j:
+    uri: 'neo4j+s://b169bf9c.databases.neo4j.io'
+    user: 'neo4j'
+    password: ''
+tests:
+  configureDb:
+    enabled: true
+  dataLoad:
+    enabled: true
+    threadsMax: 5
+  aggregation:
+    enabled: true
+  patternMatching:
+    enabled: true
+  simple:
+    enabled: true
+  traversal:
+    enabled: true
+  filters:
+    patentId: '3858241'
+    author: 'Frederick'
+    registrationDate: '1975-01-01'
+data:
+  fake:
+    authorsTotal: 10
+    classificationsTotal: 10
+    batchSize: 10  
+  dataset:
+    startDate: '1975-01-01 00:00:00'
+    endDate: '1999-12-31 00:00:00'
+    total: 50000
+    filePath: domain/dataset/snap/stanford/dataset.txt
+  max: 10
+results:
+  basePath: tests/50k/results
